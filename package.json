@@ -1,0 +1,31 @@
+{
+  "name": "chaperone",
+  "version": "1.0.0",
+  "description": "Payment firewall for AI agents. An MCP server that checks every PayPal payment request against a spending mandate, blocks prompt-injected purchases, and logs every decision",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oleratothubakgale/chaperone.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/oleratothubakgale/chaperone/issues"
+  },
+  "homepage": "https://github.com/oleratothubakgale/chaperone#readme",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.32.2",
+    "dotenv": "^18.0.9",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.6",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2"
+  }
+}
