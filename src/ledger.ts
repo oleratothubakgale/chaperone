@@ -91,6 +91,17 @@ export class Ledger {
       .all(limit) as unknown as LedgerRow[];
   }
 
+  findByOrderId(orderId: string): LedgerRow | undefined {
+    return this.db
+      .prepare(`SELECT * FROM decisions WHERE paypal_order_id = ? LIMIT 1`)
+      .get(orderId) as unknown as LedgerRow | undefined;
+  }
+
+  // Demo mode only: wipes the log so a demo or test run can start clean.
+  clearForDemo(): void {
+    this.db.exec(`DELETE FROM decisions`);
+  }
+
   close(): void {
     this.db.close();
   }
