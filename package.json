@@ -4,7 +4,9 @@
   "description": "Payment firewall for AI agents. An MCP server that checks every PayPal payment request against a spending mandate, blocks prompt-injected purchases, and logs every decision",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "smoke:create": "tsx src/smoke-create.ts",
+    "smoke:capture": "tsx src/smoke-capture.ts"
   },
   "repository": {
     "type": "git",
@@ -13,7 +15,7 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "commonjs",
+  "type": "module",
   "bugs": {
     "url": "https://github.com/oleratothubakgale/chaperone/issues"
   },
@@ -27,5 +29,8 @@
     "@types/node": "^26.6.6",
     "tsx": "^4.23.15",
     "typescript": "^7.0.2"
+  },
+  "allowScripts": {
+    "esbuild@0.28.2": true
   }
 }
