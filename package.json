@@ -4,7 +4,7 @@
   "description": "Payment firewall for AI agents. An MCP server that checks every PayPal payment request against a spending mandate, blocks prompt-injected purchases, and logs every decision",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "tsx --test src/*.test.ts",
     "smoke:create": "tsx src/smoke-create.ts",
     "smoke:capture": "tsx src/smoke-capture.ts"
   },
